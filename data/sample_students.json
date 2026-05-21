@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Arjun Mehta",
+    "age": 20,
+    "course": "Computer Science",
+    "marks": [78, 85, 91],
+    "email": "arjun.mehta@example.com"
+  },
+  {
+    "name": "Priya Sharma",
+    "age": 21,
+    "course": "Data Science",
+    "marks": [65, 70, 60],
+    "email": "priya.sharma@example.com"
+  },
+  {
+    "name": "Rahul Verma",
+    "age": 19,
+    "course": "Cybersecurity",
+    "marks": [35, 28, 42],
+    "email": "rahul.verma@example.com"
+  },
+  {
+    "name": "Sneha Patel",
+    "age": 22,
+    "course": "Computer Science",
+    "marks": [90, 88, 95],
+    "email": "sneha.patel@example.com"
+  },
+  {
+    "name": "Karan Singh",
+    "age": 20,
+    "course": "Data Science",
+    "marks": [55, 48, 62],
+    "email": "karan.singh@example.com"
+  },
+  {
+    "name": "Ananya Iyer",
+    "age": 21,
+    "course": "Cybersecurity",
+    "marks": [72, 68, 75],
+    "email": "ananya.iyer@example.com"
+  },
+  {
+    "name": "Vikram Nair",
+    "age": 23,
+    "course": "Computer Science",
+    "marks": [30, 25, 38],
+    "email": "vikram.nair@example.com"
+  },
+  {
+    "name": "Pooja Gupta",
+    "age": 20,
+    "course": "Data Science",
+    "marks": [82, 79, 88],
+    "email": "pooja.gupta@example.com"
+  },
+  {
+    "name": "Rohan Das",
+    "age": 22,
+    "course": "Cybersecurity",
+    "marks": [45, 50, 40],
+    "email": "rohan.das@example.com"
+  },
+  {
+    "name": "Meera Joshi",
+    "age": 19,
+    "course": "Computer Science",
+    "marks": [60, 55, 70],
+    "email": "meera.joshi@example.com"
+  }
+]
