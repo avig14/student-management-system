@@ -28,7 +28,7 @@ A Python application I built as part of my internship assignment. It manages stu
 
 ## Tech Stack
 
-- Python 3.x
+- Python 3.9+
 - FastAPI + Uvicorn
 - SQLite (sqlite3)
 - Pydantic v2
@@ -59,13 +59,17 @@ student_management/
 
 ## Setup
 
-**1. Clone / unzip and navigate to the project folder**
+**1. Clone the repository**
+```bash
+git clone https://github.com/avig14/student-management-system.git
+cd student-management-system
+```
 
 **2. Create a virtual environment**
 ```bash
 python -m venv venv
 venv\Scripts\activate        # Windows
-# source venv/bin/activate   # Mac/Linux
+source venv/bin/activate     # Mac/Linux
 ```
 
 **3. Install dependencies**
@@ -75,9 +79,10 @@ pip install -r requirements.txt
 
 **4. Set up environment variables**
 ```bash
-copy .env.example .env
+copy .env.example .env       # Windows
+cp .env.example .env         # Mac/Linux
 ```
-Edit `.env` and set a strong `SECRET_KEY`.
+Optionally edit `.env` to set a custom `SECRET_KEY`. The defaults work fine for local development.
 
 ---
 
@@ -87,7 +92,9 @@ Edit `.env` and set a strong `SECRET_KEY`.
 python main.py
 ```
 
-You'll see a menu with numbered options. The app loads from and saves to `students.db` automatically. If it's the first run, nothing is pre-loaded — use option 1 to add students or run the API first (which auto-seeds sample data).
+You'll see a numbered menu. The CLI reads from and writes to `students.db`.
+
+> **First run tip:** start the API server once first (`python run_api.py`) — it auto-loads the 10 sample students from `data/sample_students.json`. After that, both the CLI and the API share the same database.
 
 ---
 

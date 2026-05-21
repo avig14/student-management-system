@@ -2,7 +2,9 @@ import logging
 import os
 from logging.handlers import RotatingFileHandler
 
-os.makedirs("logs", exist_ok=True)
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_LOG_DIR = os.path.join(_BASE_DIR, "logs")
+os.makedirs(_LOG_DIR, exist_ok=True)
 
 
 def get_logger(name: str) -> logging.Logger:
@@ -19,7 +21,7 @@ def get_logger(name: str) -> logging.Logger:
     console_handler.setFormatter(console_fmt)
 
     file_handler = RotatingFileHandler(
-        "logs/app.log", maxBytes=5 * 1024 * 1024, backupCount=3
+        os.path.join(_LOG_DIR, "app.log"), maxBytes=5 * 1024 * 1024, backupCount=3
     )
     file_handler.setLevel(logging.DEBUG)
     file_fmt = logging.Formatter(

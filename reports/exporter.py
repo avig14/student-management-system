@@ -5,12 +5,17 @@ from typing import List
 
 from core.models import Student
 
-os.makedirs("reports_output", exist_ok=True)
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_OUT_DIR = os.path.join(_BASE_DIR, "reports_output")
+os.makedirs(_OUT_DIR, exist_ok=True)
+
+_CSV_PATH = os.path.join(_OUT_DIR, "students_report.csv")
+_TXT_PATH = os.path.join(_OUT_DIR, "analytics_report.txt")
 
 
 class ReportExporter:
     def export_students_csv(
-        self, students: List[Student], path: str = "reports_output/students_report.csv"
+        self, students: List[Student], path: str = _CSV_PATH
     ) -> str:
         with open(path, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
@@ -32,7 +37,7 @@ class ReportExporter:
                 ])
         return path
 
-    def export_analytics_txt(self, analytics_data: dict, path: str = "reports_output/analytics_report.txt") -> str:
+    def export_analytics_txt(self, analytics_data: dict, path: str = _TXT_PATH) -> str:
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         lines = []
         lines.append("=" * 55)
